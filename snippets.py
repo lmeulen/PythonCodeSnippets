@@ -31,11 +31,14 @@ def update_progress(part, total=100, barLength=50):
     sys.stdout.write(text)
     sys.stdout.flush()
     
-# Read a CSV file to Dataframe, filtering on one or two columns    
+    
+    
+# Read a CSV file to Dataframe, filtering on one or two columns
+# column name is string, value is a list of values
 def read_csv_filtered(file, key1, value1, key2=None, value2=None, chuncksize=100000):
-    iter_csv = pd.read_csv(file, iterator=True, chunksize=chuncksize)
+    iter_csv = pd.read_csv(file, iterator=True, chunksize=chuncksize, low_memory=False)
     if key2:
-        df = pd.concat([chk[(chk[key1] == value1) & (chk[key2] == value2)] for chk in iter_csv])
+        df = pd.concat([chk[(chk[key1].isin(value1)) & (chk[key2].isin(value2))] for chk in iter_csv])
     else:
-        df = pd.concat([chk[chk[key1] == value1] for chk in iter_csv])
+        df = pd.concat([chk[chk[key1].isin(value1)] for chk in iter_csv])
     return df
