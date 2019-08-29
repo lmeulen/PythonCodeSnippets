@@ -1,3 +1,5 @@
+from matplotlib import colors
+
 def colorname_to_hex(name):
     return colors.get_named_colors_mapping()[name]
 
