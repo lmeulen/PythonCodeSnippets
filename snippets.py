@@ -52,3 +52,8 @@ def log_line(desc, val):
 def clear_log():
     with open(logfile, "w") as myfile:
         myfile.write("")    
+
+        
+# Check presence
+def is_present(valname):
+    return valname in locals()
