@@ -42,3 +42,13 @@ def read_csv_filtered(file, key1, value1, key2=None, value2=None, chuncksize=100
     else:
         df = pd.concat([chk[chk[key1].isin(value1)] for chk in iter_csv])
     return df
+
+
+# Log function
+logfile = "log.txt"
+def log_line(desc, val):
+    with open(logfile, "a") as myfile:
+        myfile.write(desc + "," + str(val) + "\n")
+def clear_log():
+    with open(logfile, "w") as myfile:
+        myfile.write("")    
