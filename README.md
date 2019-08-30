@@ -6,6 +6,7 @@ snippets.py
 * Progress bar
 * Read CSV file to dataframe with the possibility to filter on two columns
 * Very simple file logger
+* Check variable presence
 
 gradient.py
 * Generate multi level colour gradients
