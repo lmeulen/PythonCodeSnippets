@@ -57,3 +57,8 @@ def clear_log():
 # Check presence
 def is_present(valname):
     return valname in locals()
+
+
+# Get unique items with count from a list
+mylist=['a', 'b', 'a']
+sorted(sorted([(x, mylist.count(x)) for x in list(set(mylist))]), key=lambda y: y[1])
