@@ -96,6 +96,12 @@ df = df.append({'date': '2019-09-20', 'nr': 231,  'from': 'B', 'to': 'C', 'data'
 df = df.append({'date': '2019-09-20', 'nr': 231,  'from': 'D', 'to': 'E', 'data': 3}, ignore_index=True)
 df = df.append({'date': '2019-09-20', 'nr': 231,  'from': 'A', 'to': 'B', 'data': 0}, ignore_index=True)
 
+#           date   nr from to data
+# 0   2019-09-20  231    C  D    1
+# 1   2019-09-20  231    B  C    2
+# 2   2019-09-20  231    D  E    3
+# 3   2019-09-20  231    A  B    0
+
 trajectory_from_to(df,'A', 'D', from_field='from', to_field='to',
                key_pairs=[['date', '2019-09-20'],['nr', 231]])
                
