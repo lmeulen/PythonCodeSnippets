@@ -45,7 +45,8 @@ def trajectory_from_to(dataset, start, end, from_field='from', to_field='to',
         next = result[to_field].iloc[-1]
         #print(next)
 
-    # Reindex result and return
+    # Add sequence, reindex result and return
+    result.insert(2, 'seqnr', range(0, 0 + len(result)))
     if result.iloc[-1][to_field] == end:
         result = result.reset_index()
         return result
