@@ -1,5 +1,5 @@
 conda create -y -n Visual python=3.6 tensorflow=1.11 pyyaml requests Pillow pip numpy=1.15 keras
-activate Visual
+conda activate Visual
 conda install -y -c conda-forge opencv
 # Next line installs DLIB
 python -m pip install https://files.pythonhosted.org/packages/0e/ce/f8a3cff33ac03a8219768f0694c5d703c8e037e6aba2e865f9bae22ed63c/dlib-19.8.1-cp36-cp36m-win_amd64.whl#sha256=794994fa2c54e7776659fddb148363a5556468a6d5d46be8dad311722d54bfcf
@@ -9,5 +9,4 @@ conda install -y -c conda-forge pandas xlrd xlwt matplotlib seaborn scikit-image
 conda install -y -c conda-forge simplejson curl pillow dash curl psycopg2 geoplot geopy geopandas geotiff
 conda install -y -c conda-forge google-api-python-client  google-auth google-auth-httplib2 google-auth-oauthlib
 conda install -y -c conda-forge astroid cairo folium haversine html5lib libffi libpng lxml sqlalchemy visdom
-conda install -y -c conda-forge colorama nbconvert 
-conda install -y -c conda-forge openjpeg postgresql parso glib
+conda install -y -c conda-forge colorama nbconvert openjpeg postgresql parso glib
