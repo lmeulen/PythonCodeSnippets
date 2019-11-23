@@ -10,6 +10,7 @@ conda install -y -c conda-forge simplejson curl pillow dash curl psycopg2 geoplo
 conda install -y -c conda-forge google-api-python-client  google-auth google-auth-httplib2 google-auth-oauthlib
 conda install -y -c conda-forge astroid cairo folium haversine html5lib libffi libpng lxml sqlalchemy visdom
 conda install -y -c conda-forge colorama nbconvert openjpeg postgresql parso glib gpxpy beautifulsoup4 pyaes
+conda install -y -c conda-forge pycrypto
 pip install calmap
 
 conda install -y -c conda-forge notebook ipykernel
