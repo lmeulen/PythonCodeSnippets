@@ -1,4 +1,8 @@
 conda create -y -n Visual python=3.6 tensorflow=1.11 pyyaml requests Pillow pip numpy=1.15 keras
+OR
+conda create -y -n Visual python=3.6 tensorflow-gpu pyyaml requests Pillow pip numpy=1.15 keras
+
+
 conda activate Visual
 conda install -y -c conda-forge opencv
 # Next line installs DLIB
