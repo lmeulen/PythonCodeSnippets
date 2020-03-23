@@ -17,6 +17,7 @@ conda install -y -c conda-forge astroid cairo folium haversine html5lib libffi l
 conda install -y -c conda-forge colorama nbconvert openjpeg postgresql parso glib gpxpy beautifulsoup4 pyaes
 conda install -y -c conda-forge pycrypto
 pip install calmap
+pip install dataflows
 
 conda install -y -c conda-forge notebook ipykernel
 ipython kernel install --user
