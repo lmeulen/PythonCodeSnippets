@@ -18,6 +18,7 @@ conda install -y -c conda-forge colorama nbconvert openjpeg postgresql parso gli
 conda install -y -c conda-forge pycrypto imutils
 pip install calmap
 pip install dataflows
+pip install cbsodata
 
 conda install -y -c conda-forge notebook ipykernel
 ipython kernel install --user
