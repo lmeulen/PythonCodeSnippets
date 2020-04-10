@@ -17,8 +17,35 @@ conda install -y -c conda-forge astroid cairo folium haversine html5lib libffi l
 conda install -y -c conda-forge colorama nbconvert openjpeg postgresql parso glib gpxpy beautifulsoup4 pyaes
 conda install -y -c conda-forge pycrypto imutils
 pip install calmap
-pip install dataflows
 pip install cbsodata
+
+conda install -y -c conda-forge notebook ipykernel
+ipython kernel install --user
+
+
+
+### Deep learning variant with TensorFlow / PyTorch / Keras GPU versions and OpenCV / DLib
+# Make sure CUDA 9.0 is installed: https://developer.nvidia.com/cuda-90-download-archive
+conda create -n DeepLearning python=3.6
+conda activate DeepLearning
+conda install --y c anaconda cudatoolkit
+conda install -c anaconda cudnn
+conda install -y -c aaronzs tensorflow-gpu
+conda install -y -c pytorch pytorch torchvision cudatoolkit=10.0
+conda install -y keras-gpu
+conda install -y -c conda-forge opencv
+pip install opencv-contrib-python
+conda install -y -c conda-forge dlib
+pip install matplotlib scikit-learn jupyter
+conda install -y -c conda-forge pandas xlrd xlwt seaborn scikit-image 
+conda install -y -c conda-forge simplejson curl pillow dash curl psycopg2 geoplot geopy geopandas geotiff
+conda install -y -c conda-forge google-api-python-client  google-auth google-auth-httplib2 google-auth-oauthlib
+conda install -y -c conda-forge astroid cairo folium haversine html5lib libffi libpng lxml sqlalchemy visdom
+conda install -y -c conda-forge colorama nbconvert openjpeg postgresql parso glib gpxpy beautifulsoup4 pyaes
+conda install -y -c conda-forge pycrypto imutils
+pip install calmap
+pip install cbsodata
+conda install -y -c conda-forge pyyaml requests Pillow
 
 conda install -y -c conda-forge notebook ipykernel
 ipython kernel install --user
